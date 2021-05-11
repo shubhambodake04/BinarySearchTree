@@ -9,11 +9,12 @@ namespace BinarySearchTree
         public T NodeData { get; set; }
         public BinarySearchTree<T> leftTree { get; set; }
         public BinarySearchTree<T> rightTree { get; set; }
-        public BinarySearchTree(T NodeData)
+
+        public BinarySearchTree(T nodeData)
         {
-            this.NodeData = NodeData;
-            this.leftTree = null;
+            this.NodeData = nodeData;
             this.rightTree = null;
+            this.leftTree = null;
 
         }
         int leftCount = 0, rightCount = 0;
@@ -54,6 +55,12 @@ namespace BinarySearchTree
                 this.rightTree.Display();
             }
         }
+
+        public void GetSize()
+        {
+            Console.WriteLine("Size" + " " + (1 + this.leftCount + this.rightCount));
+        }
+
 
     }
 }
